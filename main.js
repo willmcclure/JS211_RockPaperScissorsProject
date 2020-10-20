@@ -77,6 +77,11 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
     });
+    // My test
+    it('user hits enter on game before an input is collected',() => {
+      assert.equal(rockPaperScissors(" paper", "scissors "), "Hand two wins!!!");
+      assert.equal(rockPaperScissors("rock ", " scissors"), "Hand one wins!!!")
+    })
   });
 } else {
 
